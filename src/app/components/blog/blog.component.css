@@ -1,6 +1,7 @@
 input,
 label,
 textarea {
+  font-family: 'Roboto', sans-serif;
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -17,7 +18,7 @@ textarea {
 }
 .formulario{
   padding: 10px;
-  background-color: #acc5c5;
+  background-color: #7ab0b0;
   border-radius: 5px;
   border: 1px solid rgb(165, 194, 195);
 }
