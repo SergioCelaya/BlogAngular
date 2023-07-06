@@ -65,9 +65,9 @@ export class BlogComponent {
   publicarNoticia(): void {
     if (
       (this.tituloInput !== null &&
-        this.tituloInput !== '' &&
-        this.urlImagenInput !== null &&
-        this.urlImagenInput !== '') ||
+        this.tituloInput !== '' )&&
+        (this.urlImagenInput !== null &&
+        this.urlImagenInput !== '') &&
       (this.cuerpoInput !== null && this.cuerpoInput !== '')
     ) {
       const tiempoTranscurrido = Date.now();

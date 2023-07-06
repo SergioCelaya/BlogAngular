@@ -10,10 +10,16 @@ textarea {
   margin: 0 5% 0 5%;
   background-color: #dbf1f1;
 }
-.formulario {
+.formularioWraper {
   font-family: 'Roboto', sans-serif;
   flex-basis: 25%;
   padding: 5%;
+}
+.formulario{
+  padding: 10px;
+  background-color: #acc5c5;
+  border-radius: 5px;
+  border: 1px solid rgb(165, 194, 195);
 }
 .listadoNoticias {
   flex-basis: 75%;
