@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+input,
+label,
+textarea {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.noticia {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #b4dede;
+  border-radius: 10px;
+  padding: 5%;
+  border: 1px solid #9ec4c4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.imagen {
+  float: left;
+  margin-right: 10px;
+}
+.fechaPublic {
+  font-size: 0.75rem;
+}

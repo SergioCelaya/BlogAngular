@@ -7,14 +7,14 @@
         id="titulo"
         type="text"
         placeholder="Introduce el titulo"
-        [(ngModel)]="tituloInput"
+        [(ngModel)]="noticia.titulo"
       />
       <label for="urlImg">Url de la imagen</label>
       <input
         id="urlImg"
         type="text"
         placeholder="url de la imagen"
-        [(ngModel)]="urlImagenInput"
+        [(ngModel)]="noticia.urlImg"
       />
       <label for="txtNoticia">Contenido de la noticia</label>
       <textarea
@@ -22,7 +22,7 @@
         rows="10"
         cols="50"
         placeholder="Contenido de la noticia"
-        [(ngModel)]="cuerpoInput"
+        [(ngModel)]="noticia.contenido"
       ></textarea>
       <button (click)="publicarNoticia()">Publicar</button>
     </div>

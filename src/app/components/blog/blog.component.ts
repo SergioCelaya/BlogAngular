@@ -1,11 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component} from '@angular/core';
 import { Noticia } from 'src/app/interfaces/noticia.interface';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
   arrayNoticias: Noticia[] = [
@@ -24,10 +23,14 @@ export class BlogComponent {
       fechaPublic: '8/6/2023',
     },
   ];
+
+  noticia: Noticia = {
+    titulo : "",
+    urlImg:  "",
+    contenido:"",
+    fechaPublic:""
+  }
   listadoNoticias: string = '';
-  tituloInput: string = '';
-  urlImagenInput: string = '';
-  cuerpoInput: string = '';
 
   cargarNoticias(): string {
     this.listadoNoticias = '';
@@ -38,9 +41,10 @@ export class BlogComponent {
   }
 
   inicializarForm(): void {
-    this.tituloInput = '';
-    this.urlImagenInput = '';
-    this.cuerpoInput = '';
+    this.noticia.titulo = '';
+    this.noticia.urlImg = '';
+    this.noticia.fechaPublic = '';
+    this.noticia.contenido = "";
   }
 
   getTemplateNoticia(noticia: Noticia): string {
@@ -64,18 +68,18 @@ export class BlogComponent {
 
   publicarNoticia(): void {
     if (
-      (this.tituloInput !== null &&
-        this.tituloInput !== '' )&&
-        (this.urlImagenInput !== null &&
-        this.urlImagenInput !== '') &&
-      (this.cuerpoInput !== null && this.cuerpoInput !== '')
+      (this.noticia.titulo !== null &&
+        this.noticia.titulo !== '' )&&
+        (this.noticia.urlImg !== null &&
+        this.noticia.urlImg !== '') &&
+      (this.noticia.contenido !== null && this.noticia.contenido !== '')
     ) {
       const tiempoTranscurrido = Date.now();
       const hoy = new Date(tiempoTranscurrido);
       this.arrayNoticias.push({
-        titulo: this.tituloInput,
-        urlImg: this.urlImagenInput,
-        contenido: this.cuerpoInput,
+        titulo: this.noticia.titulo,
+        urlImg: this.noticia.urlImg,
+        contenido: this.noticia.contenido,
         fechaPublic: hoy.toLocaleDateString(),
       });
       this.inicializarForm();
